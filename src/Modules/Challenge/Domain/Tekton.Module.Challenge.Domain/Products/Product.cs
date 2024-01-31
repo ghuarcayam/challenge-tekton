@@ -1,6 +1,8 @@
-﻿namespace Tekton.Module.Challenge.Domain.Products
+﻿using Tekton.Module.Challenge.Domain.Products.Rules;
+
+namespace Tekton.Module.Challenge.Domain.Products
 {
-    public class Product
+    public class Product: DomainEntity
     {
         private Guid _productId;
         private string _name;
@@ -8,7 +10,7 @@
         private int _stock;
         private string _description;
         private double _price;
-        private double discount;
+        private int discount;
 
         public Product(Guid productId, string name, int stock, string description, double price)
         {
@@ -18,7 +20,10 @@
             _stock = stock;
             _description = description;
             _price = price;
-            
+
+            this.CheckRule(new ProductPriceMustBePositiveRule(_price));
+            this.CheckRule(new ProductStockMustBePositiveRule(_stock));
+
         }
 
         public Guid ProductId { get => _productId;  }
@@ -26,7 +31,7 @@
         public int Stock { get => _stock;  }
         public string Description { get => _description; }
         public double Price { get => _price; }
-        public double Discount { get => discount;  }
+        public int Discount { get => discount;  }
         public StatusProduct Status { get => _status; }
 
         /// <summary>
@@ -34,8 +39,9 @@
         /// </summary>
         /// <param name="discount"></param>
         /// <returns>Precio Final</returns>
-        public double ApplyDiscount(double discount) 
+        public double ApplyDiscount(int discount) 
         {
+            this.CheckRule(new ProductDiscountMustBeInAllowedRangeRule(discount));
            this.discount = discount;
            return  this.Price * (100 - discount) / 100;
         }

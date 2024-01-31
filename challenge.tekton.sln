@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.Inf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.UnitTests", "src\Modules\Challenge\Tests\UnitTests\Tekton.Module.Challenge.UnitTests\Tekton.Module.Challenge.UnitTests.csproj", "{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{977116EE-58AD-4AAD-B640-7DFD01426474}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

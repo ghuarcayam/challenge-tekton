@@ -25,7 +25,7 @@ namespace Tekton.Module.Challenge.UnitTests
             var product = new Product(Guid.NewGuid(), 
                             "Product Test", 12, "Test", 100);
 
-            Assert.AreNotEqual(product.ApplyDiscount(-12), 88);
+            Assert.AreNotEqual(product.ApplyDiscount(12), 85);
 
         }
     }
