@@ -29,7 +29,7 @@ La aplicación sigue una estructura de N-capas para mejorar la organización y s
 Este archivo proporciona información detallada sobre la estructura del proyecto, los patrones utilizados y los pasos para levantar la aplicación localmente.
 
 ### 1.9. Subir el proyecto a GitHub de manera pública
-El código fuente se encuentra disponible en el repositorio público de GitHub [aquí](URL_DEL_REPOSITORIO).
+El código fuente se encuentra disponible en el repositorio público de GitHub [aquí](https://github.com/ghuarcayam/challenge-tekton.git).
 
 ## Funcionalidades Implementadas
 
@@ -54,6 +54,6 @@ El método GetById retorna información detallada del producto, incluyendo campo
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone URL_DEL_REPOSITORIO
+   git clone https://github.com/ghuarcayam/challenge-tekton.git
 1. **Abra la solucion con visual studio 2022:**
-Asegurece tener instalado netcore 8
+    Asegurece tener instalado netcore 8, ejecute la aplicacion (F5f)
