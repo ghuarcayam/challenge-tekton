@@ -6,17 +6,22 @@ namespace Tekton.Module.Challenge.Domain.Products
     {
         private Guid _productId;
         private string _name;
-        private StatusProduct _status;
+        private int _status;
         private int _stock;
         private string _description;
         private double _price;
-        private int discount;
+        private int _discount;
 
-        public Product(Guid productId, string name, int stock, string description, double price)
+        private Product() 
         {
-            _productId = productId;
+            //EF
+        }
+
+        public Product(string name, int stock, string description, double price)
+        {
+            _productId = Guid.NewGuid();
             _name = name;
-            _status = StatusProduct.Active;
+            _status = StatusProduct.Active.GetHashCode();
             _stock = stock;
             _description = description;
             _price = price;
@@ -31,8 +36,8 @@ namespace Tekton.Module.Challenge.Domain.Products
         public int Stock { get => _stock;  }
         public string Description { get => _description; }
         public double Price { get => _price; }
-        public int Discount { get => discount;  }
-        public StatusProduct Status { get => _status; }
+        public int Discount { get => _discount;  }
+        public int Status { get => _status; }
 
         /// <summary>
         /// Asigna un valor al descuento y retorna el precio final
@@ -42,8 +47,17 @@ namespace Tekton.Module.Challenge.Domain.Products
         public double ApplyDiscount(int discount) 
         {
             this.CheckRule(new ProductDiscountMustBeInAllowedRangeRule(discount));
-           this.discount = discount;
+           this._discount = discount;
            return  this.Price * (100 - discount) / 100;
+        }
+
+        public void SetValues(string name, string description, double price, int stock, StatusProduct status) 
+        {
+            _name = name;
+            _status = status.GetHashCode();
+            _stock = stock;
+            _description = description;
+            _price = price;
         }
 
 

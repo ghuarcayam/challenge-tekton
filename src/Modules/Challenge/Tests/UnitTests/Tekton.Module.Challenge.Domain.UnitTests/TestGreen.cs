@@ -10,7 +10,7 @@ namespace Tekton.Module.Challenge.UnitTests
         [Test]
         public void TestNegativeNumbersNotallowedDiscount() 
         {
-            var product = new Product(Guid.NewGuid(),
+            var product = new Product(
                            "Product Test", 12, "Test", 100);
             Assert.Catch<BusinessRuleValidationException>(() => product.ApplyDiscount(-10));
         }
@@ -18,7 +18,7 @@ namespace Tekton.Module.Challenge.UnitTests
         [Test]
         public void TestPriceNegativeCatch()
         {
-            Assert.Catch<BusinessRuleValidationException>(() => new Product(Guid.NewGuid(),
+            Assert.Catch<BusinessRuleValidationException>(() => new Product(
                            "Product Test", -12, "Test", 100));
         }
     }

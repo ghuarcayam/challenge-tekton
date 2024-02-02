@@ -9,6 +9,6 @@ namespace Tekton.Module.Challenge.Domain.Products
     public enum StatusProduct
     {
         Active=1,
-        Inactive=2
+        Inactive=0
     }
 }

@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenge", "Challenge", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C6EA8D91-58E6-4B0E-B81F-F182DBDA7255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.API", "src\API\Challenge.API\Challenge.API.csproj", "{184B8DA1-8233-4021-8156-AE30CE8AD08A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.API", "src\API\Challenge.API\Challenge.API.csproj", "{184B8DA1-8233-4021-8156-AE30CE8AD08A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2AFB2F99-6211-450C-8E7B-C0E3FAFC2957}"
 EndProject
@@ -19,15 +19,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{45AADDD1-345D-4A0D-B8E9-F6CCE8AE69A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.Application", "src\Modules\Challenge\Application\Tekton.Module.Challenge.Application\Tekton.Module.Challenge.Application.csproj", "{EC6D7414-946B-4875-889F-81DFC2FF1389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tekton.Module.Challenge.Application", "src\Modules\Challenge\Application\Tekton.Module.Challenge.Application\Tekton.Module.Challenge.Application.csproj", "{EC6D7414-946B-4875-889F-81DFC2FF1389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.Domain", "src\Modules\Challenge\Domain\Tekton.Module.Challenge.Domain\Tekton.Module.Challenge.Domain.csproj", "{F4C6D6EF-7826-4D02-ADEB-24434E341B64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tekton.Module.Challenge.Domain", "src\Modules\Challenge\Domain\Tekton.Module.Challenge.Domain\Tekton.Module.Challenge.Domain.csproj", "{F4C6D6EF-7826-4D02-ADEB-24434E341B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.Infraestructure", "src\Modules\Challenge\Infraestructure\Tekton.Module.Challenge.Infraestructure\Tekton.Module.Challenge.Infraestructure.csproj", "{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.UnitTests", "src\Modules\Challenge\Tests\UnitTests\Tekton.Module.Challenge.UnitTests\Tekton.Module.Challenge.UnitTests.csproj", "{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tekton.Module.Challenge.Infraestructure", "src\Modules\Challenge\Infraestructure\Tekton.Module.Challenge.Infraestructure\Tekton.Module.Challenge.Infraestructure.csproj", "{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{977116EE-58AD-4AAD-B640-7DFD01426474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Module.Challenge.ArchTests", "src\Modules\Challenge\Tests\UnitTests\Tekton.Module.Challenge.ArchTests\Tekton.Module.Challenge.ArchTests.csproj", "{755BDBB4-CB5F-4309-B362-E3893AEA9FBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tekton.Module.Challenge.Domain.UnitTests", "src\Modules\Challenge\Tests\UnitTests\Tekton.Module.Challenge.Domain.UnitTests\Tekton.Module.Challenge.Domain.UnitTests.csproj", "{15D2BE32-1D0D-412A-8A33-295C63E8C80F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tekton.Module.Challenge.IntegrationTests", "src\Modules\Challenge\Tests\UnitTests\Tekton.Module.Challenge.IntegrationTests\Tekton.Module.Challenge.IntegrationTests.csproj", "{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +55,18 @@ Global
 		{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755BDBB4-CB5F-4309-B362-E3893AEA9FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755BDBB4-CB5F-4309-B362-E3893AEA9FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755BDBB4-CB5F-4309-B362-E3893AEA9FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755BDBB4-CB5F-4309-B362-E3893AEA9FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D2BE32-1D0D-412A-8A33-295C63E8C80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D2BE32-1D0D-412A-8A33-295C63E8C80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D2BE32-1D0D-412A-8A33-295C63E8C80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D2BE32-1D0D-412A-8A33-295C63E8C80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +81,9 @@ Global
 		{EC6D7414-946B-4875-889F-81DFC2FF1389} = {C6EA8D91-58E6-4B0E-B81F-F182DBDA7255}
 		{F4C6D6EF-7826-4D02-ADEB-24434E341B64} = {2AFB2F99-6211-450C-8E7B-C0E3FAFC2957}
 		{04FF5C4D-F21C-4AFA-BE3E-0618CE7E5D0E} = {7B82C7EE-BA23-45BC-9D9A-CBC9638CBA1B}
-		{71704BF1-D07D-4FBF-8AB6-03F5D0167E1E} = {45AADDD1-345D-4A0D-B8E9-F6CCE8AE69A0}
+		{755BDBB4-CB5F-4309-B362-E3893AEA9FBD} = {45AADDD1-345D-4A0D-B8E9-F6CCE8AE69A0}
+		{15D2BE32-1D0D-412A-8A33-295C63E8C80F} = {45AADDD1-345D-4A0D-B8E9-F6CCE8AE69A0}
+		{E2C7A6C8-CCF0-499D-9A12-34178E8A2BE8} = {45AADDD1-345D-4A0D-B8E9-F6CCE8AE69A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35E73E19-6633-4316-83FD-F13A89EA95FD}
